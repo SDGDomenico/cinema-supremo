@@ -1,0 +1,30 @@
+/* ─────────────────────────────────────────
+   CINEMASUPREMO · MAIN STYLESHEET
+   ───────────────────────────────────────── */
+
+/* Core */
+@import "core/reset.css";
+@import "core/tokens.css";
+@import "core/base.css";
+
+/* Layout */
+@import "layout/header.css";
+@import "layout/nav.css";
+@import "layout/footer.css";
+
+/* UI Components */
+@import "ui/hero.css";
+@import "ui/card.css";
+@import "ui/filters.css";
+@import "ui/grid.css";
+@import "ui/form.css";
+@import "ui/home.css";
+@import "ui/project.css";
+@import "ui/profile.css";
+@import "ui/favorites.css";
+@import "ui/legal.css";
+@import "ui/cookie.css";
+@import "ui/not-found.css";
+@import "ui/verify.css";
+@import "ui/mobile.css";
+@import "ui/admin.css";

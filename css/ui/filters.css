@@ -1,0 +1,76 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 36px 40px 0;
+}
+
+.filters button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-mid);
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+
+.filters button:hover {
+  color: var(--text-hi);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: var(--accent-dim);
+}
+
+.filters button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface-0);
+  font-weight: 600;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 48px 40px 0;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 480px;
+  padding: 12px 20px 12px 44px;
+  background: var(--surface-1);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--r-pill);
+  color: var(--text-hi);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233d3a4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.search-bar input::placeholder {
+  color: var(--text-lo);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238f8ba0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 32px 24px 0;
+  }
+
+  .search-bar input {
+    max-width: 100%;
+  }
+}

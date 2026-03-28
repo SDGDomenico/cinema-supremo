@@ -1,0 +1,279 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 48px 24px 80px;
+}
+
+.form-container form {
+  width: 100%;
+  max-width: 400px;
+  background: var(--surface-1);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-xl);
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeUp var(--dur-slow) var(--ease) both;
+}
+
+.form-container form h2 {
+  font-size: 2rem;
+  color: var(--text-hi);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--r-md);
+  color: var(--text-hi);
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.form-container input::placeholder { color: var(--text-lo); }
+
+.form-container input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.form-container button[type="submit"] {
+  padding: 15px;
+  background: var(--accent);
+  color: var(--surface-0);
+  border-radius: var(--r-md);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.form-container button[type="submit"]:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.form-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: #e05252;
+  min-height: 18px;
+  text-align: center;
+}
+
+#loginError, #registerError {
+  color: #e05252;
+  font-size: 0.8rem;
+  min-height: 18px;
+  text-align: center;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--r-md);
+  color: var(--text-hi);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.google-btn:hover {
+  border-color: var(--line-hi);
+  background: var(--surface-3);
+  transform: translateY(-1px);
+}
+
+.google-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-lo);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line-lo);
+}
+
+.profilo-password {
+  margin-top: 48px;
+  background: var(--surface-1);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-xl);
+  padding: 40px;
+}
+
+.profilo-password-title {
+  font-size: 1.6rem;
+  color: var(--text-hi);
+  margin-bottom: 8px;
+}
+
+.profilo-password-desc {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  font-weight: 300;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.profilo-password-btn {
+  padding: 12px 28px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--r-md);
+  color: var(--text-hi);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.profilo-password-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.profilo-password-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profilo-password-msg {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  min-height: 18px;
+}
+
+.profilo-password-msg--success { color: #4caf50; }
+.profilo-password-msg--error { color: #e05252; }
+
+.profilo-role-badge--google {
+  background: rgba(66,133,244,0.1);
+  border: 1px solid rgba(66,133,244,0.3);
+  color: #4285F4;
+}
+
+.form-section-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  padding-top: 8px;
+  border-top: 1px solid var(--line-lo);
+}
+
+.form-nickname-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-nickname-at {
+  position: absolute;
+  left: 18px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-nickname-wrap input {
+  padding-left: 32px;
+}
+
+.register-avatar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-avatar-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+}
+
+.register-avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.register-avatar-option {
+  aspect-ratio: 1;
+  border-radius: var(--r-md);
+  border: 2px solid transparent;
+  background: var(--surface-3);
+  padding: 8px;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.register-avatar-option:hover {
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  transform: scale(1.05);
+}
+
+.register-avatar-option--active {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.register-avatar-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#emailPasswordSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

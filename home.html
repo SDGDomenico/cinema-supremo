@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CinemaSupremo — tutte le uscite Marvel e DC in un unico posto.">
+  <title>CinemaSupremo - Home</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-brand="home">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home">CinemaSupremo</a>
+      </div>
+      <ul class="menu" id="mainMenu">
+        <li><a href="home" class="active">Home</a></li>
+        <li><a href="marvel">Marvel</a></li>
+        <li><a href="dc">DC</a></li>
+        <span id="authLinks"></span>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Il futuro del cinema è qui</h2>
+      <p>Tutte le uscite Marvel e DC in un unico posto.</p>
+    </section>
+    <section class="home-brands">
+      <a href="marvel" class="brand-card marvel">
+        <h3>Marvel</h3>
+        <p>Tutti i progetti della Marvel.</p>
+        <span>Esplora &rarr;</span>
+      </a>
+      <a href="dc" class="brand-card dc">
+        <h3>DC</h3>
+        <p>Tutti i progetti della DC.</p>
+        <span>Esplora &rarr;</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy">Privacy Policy</a>
+      <a href="cookies">Cookie Policy</a>
+      <a href="terms">Termini di Servizio</a>
+    </div>
+    <div class="footer-copy">
+      <span>&copy; 2025 - <span id="year"></span> CinemaSupremo &mdash; Tutti i diritti riservati</span>
+    </div>
+  </footer>
+
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/cookies.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

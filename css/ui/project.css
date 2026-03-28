@@ -1,0 +1,114 @@
+#content {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 0 40px 100px;
+}
+
+#project-poster {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-details {
+  background: var(--surface-1);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-xl);
+  padding: 56px;
+  margin-top: 56px;
+  animation: fadeUp var(--dur-slow) var(--ease) both;
+}
+
+.project-details h1 {
+  font-size: 2.4rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.project-details > p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text-mid);
+  margin-bottom: 40px;
+  font-weight: 300;
+  max-width: 72ch;
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.project-meta li {
+  background: var(--surface-2);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.project-meta li strong {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
+
+.project-trailer {
+  background: var(--surface-1);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-xl);
+  padding: 48px;
+  margin-top: 24px;
+  animation: fadeUp var(--dur-slow) 80ms var(--ease) both;
+}
+
+.project-trailer h3 {
+  font-size: 1.8rem;
+  color: var(--text-hi);
+  margin-bottom: 28px;
+}
+
+.trailer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.trailer-list iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-md);
+  border: none;
+  background: var(--surface-2);
+}
+
+body.error-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.error-404 {
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.error-404 h1 {
+  font-size: 7rem;
+  color: var(--accent, #d4a843);
+  margin-bottom: 16px;
+}
+
+.error-404 p {
+  color: var(--text-mid);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}

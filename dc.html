@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tutte le uscite DC — film e serie TV — su CinemaSupremo.">
+  <title>CinemaSupremo - DC</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-brand="dc">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home">CinemaSupremo</a>
+      </div>
+      <ul class="menu" id="mainMenu">
+        <li><a href="home">Home</a></li>
+        <li><a href="marvel">Marvel</a></li>
+        <li><a href="dc" class="active">DC</a></li>
+        <span id="authLinks"></span>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2 id="hero-title"></h2>
+      <p id="hero-text"></p>
+    </section>
+
+    <section class="search-bar">
+      <input type="search" id="searchInput" placeholder="Cerca un titolo..." autocomplete="off" aria-label="Cerca">
+    </section>
+
+    <section class="filters">
+      <button data-filter="all" class="active">Tutti</button>
+      <button data-filter="movie">Cinema</button>
+      <button data-filter="show">Televisione</button>
+    </section>
+
+    <section class="releases" id="releases-container"></section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy">Privacy Policy</a>
+      <a href="cookies">Cookie Policy</a>
+      <a href="terms">Termini di Servizio</a>
+    </div>
+    <div class="footer-copy">
+      <span>&copy; 2025 - <span id="year"></span> CinemaSupremo &mdash; Tutti i diritti riservati</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/releases.js"></script>
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/cookies.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

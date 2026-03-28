@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Verifica la tua email per completare la registrazione.">
+  <title>CinemaSupremo - Verifica Email</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-brand="home">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home">CinemaSupremo</a>
+      </div>
+      <ul class="menu" id="mainMenu">
+        <li><a href="home">Home</a></li>
+        <li><a href="marvel">Marvel</a></li>
+        <li><a href="dc">DC</a></li>
+        <span id="authLinks"></span>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="verify-container">
+      <div class="verify-card">
+        <div class="verify-icon">✉️</div>
+        <h2 class="verify-title">Controlla la tua email</h2>
+        <p class="verify-text">Ti abbiamo inviato un link di verifica. Clicca il link nell'email per attivare il tuo account, poi accedi.</p>
+        <a href="login" class="verify-btn">Vai al login</a>
+        <p class="verify-hint">Non hai ricevuto l'email? Controlla la cartella spam oppure <a href="login" class="verify-link">accedi e richiedi un nuovo invio</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy">Privacy Policy</a>
+      <a href="cookies">Cookie Policy</a>
+      <a href="terms">Termini di Servizio</a>
+    </div>
+    <div class="footer-copy">
+      <span>&copy; 2025 - <span id="year"></span> CinemaSupremo &mdash; Tutti i diritti riservati</span>
+    </div>
+  </footer>
+
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/cookies.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module">
+    import { auth } from "./js/firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    onAuthStateChanged(auth, (user) => {
+      if (user && user.emailVerified) window.location.replace("profile");
+    });
+  </script>
+
+</body>
+</html>

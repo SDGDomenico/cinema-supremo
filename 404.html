@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pagina non trovata — CinemaSupremo.">
+  <title>CinemaSupremo - 404</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-brand="home">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home">CinemaSupremo</a>
+      </div>
+      <ul class="menu" id="mainMenu">
+        <li><a href="home">Home</a></li>
+        <li><a href="marvel">Marvel</a></li>
+        <li><a href="dc">DC</a></li>
+        <span id="authLinks"></span>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="not-found">
+      <div class="not-found-code">404</div>
+      <h2 class="not-found-title">Pagina non trovata</h2>
+      <p class="not-found-text">L'indirizzo che hai cercato non esiste o è stato rimosso.</p>
+      <p class="not-found-redirect">Verrai reindirizzato alla home tra <span id="countdown">5</span> secondi.</p>
+      <a href="home" class="not-found-btn">Torna alla home</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy">Privacy Policy</a>
+      <a href="cookies">Cookie Policy</a>
+      <a href="terms">Termini di Servizio</a>
+    </div>
+    <div class="footer-copy">
+      <span>&copy; 2025 - <span id="year"></span> CinemaSupremo &mdash; Tutti i diritti riservati</span>
+    </div>
+  </footer>
+
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/cookies.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script>
+    let seconds = 5;
+    const el = document.getElementById("countdown");
+    const interval = setInterval(() => {
+      seconds--;
+      if (el) el.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "home";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

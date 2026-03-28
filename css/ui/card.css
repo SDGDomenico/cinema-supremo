@@ -1,0 +1,63 @@
+.card {
+  display: block;
+  background: var(--surface-1);
+  border: 1px solid var(--line-lo);
+  border-radius: var(--r-lg);
+  padding: 28px 20px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform var(--dur-mid) var(--ease),
+    border-color var(--dur-mid) var(--ease),
+    box-shadow var(--dur-mid) var(--ease);
+  animation: fadeUp 400ms var(--ease) both;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--accent-dim, rgba(212,168,67,0.08)), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  box-shadow: var(--shadow-lg), 0 0 48px var(--accent-glow, rgba(212,168,67,0.12));
+}
+
+.card:hover::after { opacity: 1; }
+
+.card img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-inline: auto;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.55));
+  transition: transform var(--dur-mid) var(--ease);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card:hover img { transform: scale(1.05); }
+
+.card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.07em;
+  color: var(--text-hi);
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+}
